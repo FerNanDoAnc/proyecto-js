@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto en js</title>
+    <!--CSS-->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link id="theme" rel="stylesheet" href="css/green.css" type="text/css">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--MOment js-->
+    <SCript src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></SCript>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/es.min.js"></script>
+    <!--Scripts-->
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+    <div id="selector-theme">
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+        <div id="to-blue"></div>
+    </div>
     <section id="global">
         <header>
             <div id="logo">
@@ -24,27 +41,53 @@
             </nav>
         </header>
         <div id="slider">
-
+            <div class="galeria">
+                <div>
+                    <img src="img/hojas.jpg" title="Hojas">
+                </div>
+                <div>
+                    <img src="img/rojo.jpg" title="Rojas">
+                </div>
+                <div>
+                    <img src="img/cielo.jpg" title="Cielo">
+                </div>
+              </div>
         </div>
         <section id="content">
             <div id="posts">
-                <article class="post">
-                    <h2>Titulo del articulo</h2>
-                    <span>Fecha de publicacion</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sapiente aspernatur ipsam odit quaerat, quos quod dolore, 
-                        incidunt possimus magni iusto ratione ad repellat ex. 
-                        Labore minima repudiandae dolor nesciunt cumque.</p>
-                </article>
+                <!--Cargar posts desde el json-->
             </div>
-            <sliderbar id="sliderbar">
-
-            </sliderbar>
+            <aside id="sidebar">
+                <div id="about">
+                    <h4><span>¿Quien soy?</span></h4>
+                    <img src="img/caracol.jpg" alt="imagen">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Excepturi dolore tenetur alias temporibus nam.
+                     </p>
+                </div>
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                    <form >
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name">
+                        <label for="email">Correro</label>
+                        <input type="text" name="email">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password">
+                        
+                        <input type="submit" value="Entrar">
+                    </form>
+                </div>
+            </aside>
+            <div class="clearfix">
+                
+            </div>
         </section>
+        
     </section>
 
     <footer>
-        Curso de master en JS
+        Curso de js Fernando
     </footer>
 </body>
 </html>
