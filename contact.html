@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
 	<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
 	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-		
+	<!--Plugin para las validaciones-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js">
+    </script>
     <!--Scripts-->
     <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -41,34 +43,37 @@
         
         <section id="content">
             <div id="box">
-                <!--Cargar acordeon-->
-                <h2>Sobre mi</h2>
-                <div id="acordeon">
-                    <h3>¿Quienes somos?</h3>
-                    <div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Consequuntur ipsum esse, 
-                            harum hic possimus non molestiae voluptate sequi inventore deleniti? 
-                            Delectus sit accusamus hic error incidunt similique.
-                            Ad, alias id?</p>
-                    </div>
-                    <h3>Nuestros Servicios</h3>
-                    <div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Consequuntur ipsum esse, 
-                            harum hic possimus non molestiae voluptate sequi inventore deleniti? 
-                            Delectus sit accusamus hic error incidunt similique.
-                            Ad, alias id?</p>
-                    </div>
-                    <h3>Nuestros Clientes</h3>
-                    <div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Consequuntur ipsum esse, 
-                            harum hic possimus non molestiae voluptate sequi inventore deleniti? 
-                            Delectus sit accusamus hic error incidunt similique.
-                            Ad, alias id?</p>
-                    </div>
-                </div>
+                <!--Cargar Contacto-->
+                <h2>Contacto</h2>
+                <form id="form_contact" action="POST">
+                    <label for="name">Nombres</label>
+                    <input type="text" name="name"
+                    data-validation="alphanumeric">
+
+                    <label for="surname">Apellidos</label>
+                    <input type="text" name="surname"
+                    data-validation="alphanumeric">
+
+                    <label for="">Email</label>
+                    <input type="email" name="email"
+                    data-validation="email">
+
+                    <label for="sex">Sexo</label>
+                    <select name="sex" id="" data-validation="required">
+                        <option value="man">Hombre</option>
+                        <option value="woman">mujer</option>
+                    </select>
+
+                    <label for="date">Fecha de Nacimiento</label>
+                    <input type="text" name="date" 
+                    data-validation="date" data-validation-format="dd-mm-yyyy">
+
+                    <label for="years">Edad</label>
+                    <input type="number" name="years"
+                    data-validation="number">
+
+                    <input type="submit" name="Envar">
+                </form>
             </div>
             <aside id="sidebar">
                 <div id="about">
