@@ -13,6 +13,7 @@
     padding: 50px;
     background: white;
     box-shadow: 0px 0px 2px gray;
+    border-radius: 8px;
 }
 #logo{
     font-family: Verdana,Arial;
@@ -63,7 +64,8 @@
 .post{
     padding: 6px;
 }
-.post h2{
+h2{
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     color: #333;
 }
@@ -145,6 +147,7 @@ footer{
     padding-right: 20px;
     margin-top: 50px;
     line-height: 47px;
+    border-radius: 8px;
 }
 
 .bx-wrapper, .bx-viewport{
@@ -157,6 +160,7 @@ footer{
     background: rgba(51, 51, 51, 0.5);
     width: 45px;
     height: 130px;
+    border-radius: 8px;
 }
 
 #to-green,
@@ -171,6 +175,7 @@ footer{
     margin-bottom: 10px;
     margin-left: 5px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 #to-green{
@@ -188,4 +193,12 @@ footer{
     text-decoration: none;
     display: block;
     float: right;
+}
+#box{
+    width: 60%;
+    float: left;
+    margin-top: 40px;
+}
+#acordeon{
+    margin-top: 20px;
 }

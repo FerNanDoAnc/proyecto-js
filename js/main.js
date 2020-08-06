@@ -1,12 +1,15 @@
 $(document).ready(function(){
     //sliders
-    $('.galeria').bxSlider({
-        mode: 'fade',
-        captions: true,
-        slideWidth: 1200,
-        pager: true,
-    });
-    //posts
+    if(window.location.href.indexOf('index')>-1){
+        $('.galeria').bxSlider({
+            mode: 'fade',
+            captions: true,
+            slideWidth: 1200,
+            pager: true,
+        });
+        }
+        //posts
+    if(window.location.href.indexOf('index')>-1){
     var posts=[
         {
             tittle:'Prueba de titulo 1',
@@ -27,21 +30,33 @@ $(document).ready(function(){
             tittle:'Prueba de titulo 4',
             date: 'Publicado el dia '+moment().format("dddd")+' '+moment().date()+' de '+moment().format("MMMM")+' del '+moment().format("YYYY"),
             content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore tenetur alias temporibus nam.'
+        },
+        {
+            tittle:'Prueba de titulo 4',
+            date: 'Publicado el dia '+moment().format("dddd")+' '+moment().date()+' de '+moment().format("MMMM")+' del '+moment().format("YYYY"),
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore tenetur alias temporibus nam.'
+        },
+        {
+            tittle:'Prueba de titulo 4',
+            date: 'Publicado el dia '+moment().format("dddd")+' '+moment().date()+' de '+moment().format("MMMM")+' del '+moment().format("YYYY"),
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore tenetur alias temporibus nam.'
         }
     ];
-    posts.forEach((item, index)=>{
-        var post= `
-        <article class="post">
-                <h2>${item.tittle}</h2>
-                <span class="date">${item.date}</span>
-                <p>
-                    ${item.content}
-                </p>
-                <a href="#" class="button-more">Leer mas ...</a>
-            </article>
-        `;
-        $("#posts").append(post);
-    });
+
+        posts.forEach((item, index)=>{
+            var post= `
+            <article class="post">
+                    <h2>${item.tittle}</h2>
+                    <span class="date">${item.date}</span>
+                    <p>
+                        ${item.content}
+                    </p>
+                    <a href="#" class="button-more">Leer mas ...</a>
+                </article>
+            `;
+            $("#posts").append(post);
+        });
+    }
     //Selectores de tema
     var theme=$("#theme");
     theme.attr('href',localStorage.theme);
@@ -86,5 +101,8 @@ $(document).ready(function(){
             localStorage.clear();
             location.reload();
         });
+    }
+    if(window.location.href.indexOf('about')>-1){
+        $("#acordeon").accordion();
     }
 });

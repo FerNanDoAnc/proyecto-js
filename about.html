@@ -9,12 +9,10 @@
     <link id="theme" rel="stylesheet" href="css/green.css" type="text/css">
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--Slider-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <!--MOment js-->
-    <SCript src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></SCript>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/es.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+	<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+	<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+		
     <!--Scripts-->
     <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -33,29 +31,44 @@
             </div>
             <nav id="menu">
                 <ul >
-                    <li><a href="indeex.html">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="#">Reloj</a></li>
                     <li><a href="about.html">Sobre Mi</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
         </header>
-        <div id="slider">
-            <div class="galeria">
-                <div>
-                    <img src="img/hojas.jpg" title="Hojas">
-                </div>
-                <div>
-                    <img src="img/rojo.jpg" title="Rojas">
-                </div>
-                <div>
-                    <img src="img/cielo.jpg" title="Cielo">
-                </div>
-              </div>
-        </div>
+        
         <section id="content">
-            <div id="posts">
-                <!--Cargar posts desde el json-->
+            <div id="box">
+                <!--Cargar acordeon-->
+                <h2>Sobre mi</h2>
+                <div id="acordeon">
+                    <h3>¿Quienes somos?</h3>
+                    <div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Consequuntur ipsum esse, 
+                            harum hic possimus non molestiae voluptate sequi inventore deleniti? 
+                            Delectus sit accusamus hic error incidunt similique.
+                            Ad, alias id?</p>
+                    </div>
+                    <h3>Nuestros Servicios</h3>
+                    <div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Consequuntur ipsum esse, 
+                            harum hic possimus non molestiae voluptate sequi inventore deleniti? 
+                            Delectus sit accusamus hic error incidunt similique.
+                            Ad, alias id?</p>
+                    </div>
+                    <h3>Nuestros Clientes</h3>
+                    <div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Consequuntur ipsum esse, 
+                            harum hic possimus non molestiae voluptate sequi inventore deleniti? 
+                            Delectus sit accusamus hic error incidunt similique.
+                            Ad, alias id?</p>
+                    </div>
+                </div>
             </div>
             <aside id="sidebar">
                 <div id="about">
